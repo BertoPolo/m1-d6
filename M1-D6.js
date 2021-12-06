@@ -14,63 +14,108 @@ ASSIGNMENT RULES
 /* EXERCISE A
    Create a variable called test and assign a string value to it.
 */
-
+const test = "Hello everybody"
+console.log(test)
 /* EXERCISE B
     Create a variable called sum and assign to it the result of the sum between the numbers 10 and 20.
 */
+const sum = 10+20
+console.log(sum)
 
 /* EXERCISE C
     Create a variable called random and assign to it a random number between 0 and 20 (it should be randomly created at each execution).
 */
+const random = Math.random()* 20
+//const random = Math.floor(Math.random()* 20)
+
+console.log(random)
 
 /* EXERCISE D
     Create a variable called me and assign to it an object containing the following information: name = your name, surname = your surname, age = your age.
 */
-
+let me = {
+  name:"Albert",
+  surname:"Powlow",
+  age:30,
+}
+console.log(me)
 /* EXERCISE E
     Write a piece of code for programmatically removing the age property from the previously create object.
 */
+delete me.age
 
+console.log(me)
 /* EXERCISE F
    Write a piece of code for programmatically adding to the me object you defined before an array called skills, containing the programming languages you know right now.
 */
+me.skills = ["html","css","js",]
 
+console.log(me)
 /* EXERCISE G
    Write a piece of code for programmatically removing the last skill from the skills array inside the me object.
 */
 
+me.skills.pop()
+console.log(me)
 // JS Functions
 /* EXERCISE 1
     Write a function called dice; it should randomize an integer number between 1 and 6.
 */
+const dice = function(ranNum){
+  return Math.floor(Math.random()* 6)
+}
+console.log(dice())
 
 /* EXERCISE 2
     Write a function called whoIsBigger which receives 2 numbers as parameters and returns the biggest one.
 */
-
+const whoIsBigger = function(num1,num2){
+  return num1>num2 ? num1 : num2
+}
+console.log(whoIsBigger(10,30))
 /* EXERCISE 3
     Write a function called splitMe which receives a string as a parameter and returns an array with every word in that string.
     Ex.: splitMe("I love coding") => returns ["I", "Love", "Coding"]
 */
+const splitMe = function(strToArray){
+  return strToArray.split(" ")
+}
+console.log(splitMe("hello I am a machine"))
+
 
 /* EXERCISE 4
     Write a function called deleteOne which receives a string and a boolean as parameters.
     If the boolean value is true it should return the string without the first letter, otherwise it should remove the last one from it.
 */
+const deleteOne = function(str,bol){
+  return bol ? str.substring(1) : str.slice(0, -1)
+}
+console.log(deleteOne("hola",false))
 
 /* EXERCISE 5
    Write a function called onlyLetters which receives a string as a parameter and returns it removing all the digits.
    Ex.: onlyLetters("I have 4 dogs") => returns "I have  dogs"
 */
+const onlyLetters = function(str){
+ return str.replace(/[^a-zA-Z ]/g, "")
+}
+console.log(onlyLetters("aksdj1231455asodjad"))
+
 
 /* EXERCISE 6
    Write a function called isThisAnEmail which receives a string as a parameter and returns true if the string is a valid email address.
 */
+const isThisAnEmail = function(str){
+  str.includes("@",".com,") ? true : false
 
+}
 /* EXERCISE 7
    Write a function called whatDayIsIt that should return the current day of the week.
 */
-
+const whatDayIsIt = function(){
+  return new Date().getDate()
+}
+console.log(whatDayIsIt())
 /* EXERCISE 8
     Write a function called rollTheDices which receives a number as a parameter.
     It should invoke the dice() function defined in Ex1 the specified amount of times,
