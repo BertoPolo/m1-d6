@@ -61,7 +61,7 @@ console.log(me)
 /* EXERCISE 1
     Write a function called dice; it should randomize an integer number between 1 and 6.
 */
-const dice = function(ranNum){
+const dice = function(){
   return Math.floor(Math.random()* 6)
 }
 console.log(dice())
@@ -124,16 +124,43 @@ console.log(whatDayIsIt())
     Example: RollTheDices(3) => returns {
         sum: 10
         values: [3, 3, 4]
-    }
+
+    }rollthedices= funcion
+    dice = numero al que llegar dividiendo
+    number= numero de veces por las que dividir DICE
+
 */
+const rollTheDices = function(rollDiceTimes){
+ 
+  for(let i=0;i<rollDiceTimes;rollDiceTimes++){
+    let rolledDices =+ dice()
+  }
+  
+
+}
+//hacer que llame rollthedices tantas veces como 
+
+
+
+
 
 /* EXERCISE 9
    Write a function called howManyDays which receives a date as a parameter and returns the number of days passed since that date.
 */
-
+// const howManyDays=function(date){
+//   let today =[new Date().getDay(),":"] 
+// concat ??
+//}
 /* EXERCISE 10
    Write a function called isTodayMyBirthday which should return true if today's your birthday, false otherwise.
-*/
+   */
+  let isTodayMyBirthday =function(today){
+    let Bday= 19
+    //today = new Date().getDay() //+ new Date().getMonth())
+    return today == Bday ? true : false
+    
+  }
+  console.log(isTodayMyBirthday(new Date().getDay()))
 
 // JS Arrays & Objects
 // NOTE: the movies array used in some exercises is defined at the end of this file
