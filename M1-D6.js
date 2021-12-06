@@ -169,6 +169,7 @@ console.log(me)
    Write a piece of code for programmatically removing the last skill from the skills array inside the me object.
 */
 
+
 me.skills.pop()
 console.log(me)
 // JS Functions
@@ -257,6 +258,22 @@ console.log(whatDayIsIt())
 }
 console.log(rollTheDices(2)) */
 
+function rollTheDices(n) { // number of times we are rolling the dice
+ 
+  let sum = 0 // the sum of all the dice rolls
+  let values = [] // the list of all the dice rolls performed
+
+  for (let i = 0; i < n; i++) {
+      const random = dice() // get a random number from 1 to 6
+
+      sum += random // updating the sum with the new number
+      values.push(random) // updating the list with the new number
+  }
+
+  return { sum, values }
+
+}//Luis Antonio's code
+
 
 
 
@@ -268,6 +285,9 @@ console.log(rollTheDices(2)) */
 //   let today =[new Date().getDay(),":"] 
 // concat ??
 //}
+
+const today=new Date
+today.get
 /* EXERCISE 10
    Write a function called isTodayMyBirthday which should return true if today's your birthday, false otherwise.
    */
