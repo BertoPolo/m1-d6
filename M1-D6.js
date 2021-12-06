@@ -329,6 +329,8 @@ for(let i=0;i<movies.length;i++){
 }
 console.log(onlyInThisMillennium())
 
+// not fully correct, should ONLY print true's and not as  a boolean 
+
 /* EXERCISE 16 
     Write a function called getMovieById which receives an id as a parameter and returns the movie with the given id from the provided movies array.
 */
